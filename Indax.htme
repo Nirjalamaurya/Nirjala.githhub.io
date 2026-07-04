@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧩 Puzzle Challenge</h1>
+
+    <p class="welcome">
+        Welcome to the Puzzle Challenge Game!
+    </p>
+
+    <p>
+        Solve all <strong>4 puzzles</strong> and see your final score.
+    </p>
+
+    <div class="rules">
+        <h2>Game Rules</h2>
+
+        <ul>
+            <li>✔ Solve each puzzle.</li>
+            <li>✔ Type the correct answer.</li>
+            <li>✔ Press Next to continue.</li>
+            <li>✔ Final score will appear after Puzzle 4.</li>
+        </ul>
+    </div>
+
+    <a href="puzzle1.html" class="start-btn">
+        Start Game
+    </a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
