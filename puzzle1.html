@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧩 Puzzle 1</h1>
+
+    <div class="progress">
+        Puzzle 1 of 4
+    </div>
+
+    <div class="puzzle-box">
+        <h2>Question</h2>
+
+        <p>
+            I have keys but no locks. I have space but no rooms.
+            You can enter but can't go outside.
+            What am I?
+        </p>
+
+        <input
+            type="text"
+            id="answer"
+            placeholder="Type your answer here">
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Next Puzzle
+        </button>
+
+        <p id="message"></p>
+    </div>
+
+</div>
+
+<script>
+function checkAnswer(){
+
+    let answer = document.getElementById("answer").value.trim().toLowerCase();
+
+    let score = Number(localStorage.getItem("score")) || 0;
+
+    if(answer === "keyboard"){
+        score++;
+        localStorage.setItem("score", score);
+    }
+
+    window.location.href = "puzzle2.html";
+}
+</script>
+
+</body>
+</html>
