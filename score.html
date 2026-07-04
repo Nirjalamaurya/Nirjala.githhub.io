@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎉 Game Completed!</h1>
+
+    <div class="puzzle-box">
+
+        <h2>Your Final Score</h2>
+
+        <h1 id="score">0 / 4</h1>
+
+        <p id="message"></p>
+
+        <br>
+
+        <button onclick="playAgain()">
+            🔄 Play Again
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+let score = Number(localStorage.getItem("score")) || 0;
+
+document.getElementById("score").innerHTML = score + " / 4";
+
+if(score === 4){
+    document.getElementById("message").innerHTML =
+    "🏆 Excellent! You solved all the puzzles!";
+}
+else if(score >=
