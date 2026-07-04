@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧩 Puzzle 4</h1>
+
+    <div class="progress">
+        Puzzle 4 of 4
+    </div>
+
+    <div class="puzzle-box">
+        <h2>Question</h2>
+
+        <p>
+            What comes once in a minute,
+            twice in a moment,
+            but never in a thousand years?
+        </p>
+
+        <input
+            type="text"
+            id="answer"
+            placeholder="Type your answer here">
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+            Finish Game
+        </button>
+
+        <p id="message"></p>
+    </div>
+
+</div>
+
+<script>
+function checkAnswer() {
+
+    let answer = document.getElementById("answer").value.trim().toLowerCase();
+
+    let score = Number(localStorage.getItem("score")) || 0;
+
+    if (answer === "m") {
+        score++;
+        localStorage.setItem("score", score);
+    }
+
+    window.location.href = "score.html";
+}
+</script>
+
+</body>
+</html>
